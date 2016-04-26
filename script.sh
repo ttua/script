@@ -1,6 +1,6 @@
 #!/bin/bash
 
-x=$(nmap -sP 10.0.1.0/24 | grep --color=auto -E -o '([0-9]{1,3}[\.]){3}[0-9]{1,3}' )
+x=$(nmap -sP $*/24 | grep --color=auto -E -o '([0-9]{1,3}[\.]){3}[0-9]{1,3}' )
 
 echo start:
 echo $x
