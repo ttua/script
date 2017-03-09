@@ -1,0 +1,67 @@
+
+Starting Nmap 7.12 ( https://nmap.org ) at 2016-08-09 17:36 UTC
+Nmap scan report for 118.184.31.122
+Host is up (0.081s latency).
+Not shown: 980 closed ports
+PORT     STATE    SERVICE        VERSION
+21/tcp   open     ftp            Microsoft ftpd
+|_ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_ftp-bounce: bounce working!
+80/tcp   open     http           Microsoft IIS httpd
+| http-robots.txt: 17 disallowed entries (15 shown)
+| /plus/ad_js.php /plus/advancedsearch.php 
+| /plus/car.php /plus/carbuyaction.php /plus/shops_buyaction.php 
+| /plus/erraddsave.php /plus/posttocar.php /plus/disdls.php 
+| /plus/feedback_js.php /plus/mytag_js.php /plus/rss.php /plus/search.php 
+|_/plus/recommend.php /plus/stow.php /plus/count.php
+|_http-server-header: WWW Server/1.1
+|_http-title: \xE6\x9C\x89\xE7\x9C\x9F\xE7\xBD\x91-\xE8\x87\xB4\xE5\x8A\x9B\xE4\xBA\x8E\xE5\x88\x86\xE4\xBA\xAB\xE4\xB8\x96\xE7\x95\x8C\xE4\xB8\x8A\xE7\x9A\x84\xE5\xA5\x87\xE9\x97\xBB\xE5\xBC\x82\xE4\xBA\x8B\xE3\x80\x81\xE8\xA7\xA3\xE5\xB0\xBD\xE4\xB8\x96\xE4...
+88/tcp   filtered kerberos-sec
+135/tcp  filtered msrpc
+139/tcp  filtered netbios-ssn
+389/tcp  filtered ldap
+445/tcp  filtered microsoft-ds
+464/tcp  filtered kpasswd5
+593/tcp  filtered http-rpc-epmap
+636/tcp  filtered ldapssl
+999/tcp  open     http           Microsoft IIS httpd
+| http-robots.txt: 1 disallowed entry 
+|_/
+|_http-server-header: WWW Server/1.1
+|_http-title: phpMyAdmin 
+1025/tcp filtered NFS-or-IIS
+1028/tcp open     msrpc          Microsoft Windows RPC
+1433/tcp filtered ms-sql-s
+1720/tcp filtered h323q931
+3001/tcp filtered nessus
+3003/tcp filtered cgms
+3306/tcp filtered mysql
+3389/tcp open     ms-wbt-server  Microsoft Terminal Service
+4444/tcp filtered krb524
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows 2003|XP|2000 (93%)
+OS CPE: cpe:/o:microsoft:windows_server_2003::sp2 cpe:/o:microsoft:windows_xp::sp2 cpe:/o:microsoft:windows_2000::sp4
+Aggressive OS guesses: Microsoft Windows Server 2003 SP2 (93%), Microsoft Windows Server 2003 R2 SP2 (92%), Microsoft Windows Server 2003 SP1 (90%), Microsoft Windows Server 2003 SP1 or SP2 (89%), Microsoft Windows XP SP2 (87%), Microsoft Windows 2003 (86%), Microsoft Windows XP SP3 (86%), Microsoft Windows Server 2003 (85%), Microsoft Windows 2000 SP4 (85%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 14 hops
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+TRACEROUTE (using port 111/tcp)
+HOP RTT      ADDRESS
+1   0.17 ms  192.168.1.1
+2   2.19 ms  1.80.53.119.adsl-pool.jlccptt.net.cn (119.53.80.1)
+3   ...
+4   25.17 ms 177.96.48.119.adsl-pool.jlccptt.net.cn (119.48.96.177)
+5   19.97 ms 219.158.108.245
+6   20.15 ms 219.158.6.42
+7   23.32 ms 219.158.40.166
+8   ...
+9   55.79 ms 59.43.246.10
+10  58.23 ms 59.43.248.246
+11  59.14 ms 59.43.249.5
+12  57.27 ms 118.184.22.2
+13  ...
+14  85.11 ms 118.184.31.122
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 114.39 seconds

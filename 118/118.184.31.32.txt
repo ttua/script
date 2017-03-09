@@ -1,0 +1,56 @@
+
+Starting Nmap 7.12 ( https://nmap.org ) at 2016-08-09 14:32 UTC
+Nmap scan report for 118.184.31.32
+Host is up (0.078s latency).
+Not shown: 983 closed ports
+PORT      STATE    SERVICE        VERSION
+23/tcp    filtered telnet
+80/tcp    open     http           Apache httpd 2.4.10 ((Win32) OpenSSL/0.9.8zb PHP/5.3.29)
+| http-title: \xE7\x94\xA8\xE6\x88\xB7\xE7\x99\xBB\xE5\xBD\x95\xEF\xBC\x8D\xE5\xA4\xA7\xE7\xA6\x8F\xE7\xBD\x91
+|_Requested resource was /index.php/user/login
+135/tcp   filtered msrpc
+139/tcp   filtered netbios-ssn
+161/tcp   filtered snmp
+445/tcp   filtered microsoft-ds
+593/tcp   filtered http-rpc-epmap
+3306/tcp  open     mysql          MySQL (unauthorized)
+3389/tcp  open     ms-wbt-server?
+| ssl-cert: Subject: commonName=WIN-5JKMU7VUHC3
+| Not valid before: 2016-07-11T16:51:12
+|_Not valid after:  2017-01-10T16:51:12
+|_ssl-date: 2016-08-09T14:36:19+00:00; +1m49s from scanner time.
+4444/tcp  filtered krb524
+8800/tcp  open     sunwebadmin?
+49152/tcp open     unknown
+49153/tcp open     msrpc          Microsoft Windows RPC
+49154/tcp open     msrpc          Microsoft Windows RPC
+49155/tcp open     msrpc          Microsoft Windows RPC
+49156/tcp open     unknown
+49157/tcp open     msrpc          Microsoft Windows RPC
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows Vista|2008|7|2012 (95%)
+OS CPE: cpe:/o:microsoft:windows_vista::- cpe:/o:microsoft:windows_vista::sp1 cpe:/o:microsoft:windows_server_2008:r2:sp1 cpe:/o:microsoft:windows_7::sp1 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows_server_2012
+Aggressive OS guesses: Microsoft Windows Vista SP0 - SP1 (95%), Microsoft Windows Server 2008 R2 SP1 (94%), Microsoft Windows 7 SP1 (94%), Microsoft Windows Vista SP0 or SP1, Windows Server 2008 SP1, or Windows 7 (92%), Microsoft Windows Server 2008 R2 SP1 or Windows 8 (91%), Microsoft Windows Server 2008 R2 (91%), Microsoft Windows 7 SP1 or Windows Server 2008 R2 (91%), Microsoft Windows 7 SP1 or Windows Server 2008 SP2 or 2008 R2 SP1 (91%), Microsoft Windows 7 Professional (91%), Microsoft Windows Vista SP2 (91%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 14 hops
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+TRACEROUTE (using port 443/tcp)
+HOP RTT      ADDRESS
+1   0.18 ms  192.168.1.1
+2   2.23 ms  1.80.53.119.adsl-pool.jlccptt.net.cn (119.53.80.1)
+3   ...
+4   22.64 ms 173.96.48.119.adsl-pool.jlccptt.net.cn (119.48.96.173)
+5   21.64 ms 219.158.108.245
+6   23.67 ms 219.158.6.42
+7   23.46 ms 219.158.40.166
+8   ...
+9   53.49 ms 59.43.246.113
+10  53.72 ms 59.43.246.230
+11  55.53 ms 59.43.249.5
+12  57.49 ms 118.184.22.2
+13  ...
+14  86.13 ms 118.184.31.32
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 137.52 seconds

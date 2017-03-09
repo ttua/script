@@ -1,0 +1,84 @@
+
+Starting Nmap 7.12 ( https://nmap.org ) at 2016-08-09 17:47 UTC
+Nmap scan report for 118.184.31.138
+Host is up (0.076s latency).
+Not shown: 988 closed ports
+PORT     STATE    SERVICE        VERSION
+21/tcp   open     ftp            Pure-FTPd
+22/tcp   open     ssh            OpenSSH 5.3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 ca:67:2c:c8:4f:7e:fd:62:a1:b0:dd:d1:ff:78:61:9b (DSA)
+|_  2048 50:da:87:c6:10:1a:27:30:0a:bf:b2:3d:9d:e0:14:5c (RSA)
+80/tcp   open     http           Apache httpd (PHP 5.4.26)
+|_http-server-header: Apache
+|_http-title: \xB9\xA7\xCF\xB2\xA3\xAClanmp_wdcp \xB0\xB2\xD7\xB0\xB3\xC9\xB9\xA6
+111/tcp  open     rpcbind        2-4 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2,3,4        111/tcp  rpcbind
+|   100000  2,3,4        111/udp  rpcbind
+|   100024  1          57957/tcp  status
+|_  100024  1          59601/udp  status
+135/tcp  filtered msrpc
+139/tcp  filtered netbios-ssn
+445/tcp  filtered microsoft-ds
+593/tcp  filtered http-rpc-epmap
+1723/tcp open     pptp           linux (Firmware: 1)
+3306/tcp open     mysql          MySQL (unauthorized)
+4444/tcp filtered krb524
+8080/tcp open     http-proxy
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8080-TCP:V=7.12%I=7%D=8/9%Time=57AA174D%P=arm-unknown-linux-gnueabi
+SF:hf%r(GetRequest,10C,"HTTP/1\.0\x20302\x20Found\r\nLocation:\x20/login\r
+SF:\nSet-Cookie:\x20wdcpsessionID=6fad37ecfb8ebad55d69f70fceaf73f7;\x20Pat
+SF:h=/;\x20Expires=Tue,\x2009\x20Aug\x202016\x2018:17:50\x20GMT;\x20Max-Ag
+SF:e=1800;\x20HttpOnly\r\nDate:\x20Tue,\x2009\x20Aug\x202016\x2017:47:50\x
+SF:20GMT\r\nContent-Length:\x200\r\nContent-Type:\x20text/plain;\x20charse
+SF:t=utf-8\r\n\r\n")%r(HTTPOptions,10C,"HTTP/1\.0\x20302\x20Found\r\nLocat
+SF:ion:\x20/login\r\nSet-Cookie:\x20wdcpsessionID=13b9f36a6a46d169f83769ba
+SF:8d5fd08a;\x20Path=/;\x20Expires=Tue,\x2009\x20Aug\x202016\x2018:17:51\x
+SF:20GMT;\x20Max-Age=1800;\x20HttpOnly\r\nDate:\x20Tue,\x2009\x20Aug\x2020
+SF:16\x2017:47:51\x20GMT\r\nContent-Length:\x200\r\nContent-Type:\x20text/
+SF:plain;\x20charset=utf-8\r\n\r\n")%r(RTSPRequest,58,"HTTP/1\.1\x20400\x2
+SF:0Bad\x20Request\r\nContent-Type:\x20text/plain\r\nConnection:\x20close\
+SF:r\n\r\n400\x20Bad\x20Request")%r(FourOhFourRequest,20E,"HTTP/1\.0\x2040
+SF:4\x20Not\x20Found\r\nContent-Length:\x20271\r\nSet-Cookie:\x20wdcpsessi
+SF:onID=91e0e7f0c808dde086a8f89a01663a95;\x20Path=/;\x20Expires=Tue,\x2009
+SF:\x20Aug\x202016\x2018:17:51\x20GMT;\x20Max-Age=1800;\x20HttpOnly\r\nDat
+SF:e:\x20Tue,\x2009\x20Aug\x202016\x2017:47:51\x20GMT\r\nContent-Type:\x20
+SF:text/html;\x20charset=utf-8\r\n\r\n\n<!DOCTYPE\x20html>\n<html>\n<head>
+SF:\n\x20\x20\x20\x20<meta\x20http-equiv=\"Content-Type\"\x20content=\"tex
+SF:t/html;\x20charset=UTF-8\"\x20/>\n\x20\x20\x20\x20<title>wdCP\x20error<
+SF:/title>\n</head>\n<body>\n\x20\x20\x20\x20<div\x20id=\"header\">\n\x20\
+SF:x20\x20\x20\x20\x20\x20\x20<h2>wdCP\x20err\x20<a\x20href=\"http://www\.
+SF:wdlinux\.cn/bbs\">link</a></h2>\n\x20\x20\x20\x20</div>\n\n</body>\n</h
+SF:tml>\n")%r(Socks5,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Typ
+SF:e:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")
+SF:%r(GenericLines,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:
+SF:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r
+SF:(Help,58,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/p
+SF:lain\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request");
+Aggressive OS guesses: Linux 2.6.32 (95%), WatchGuard Fireware 11.8 (95%), Synology DiskStation Manager 5.1 (94%), Linux 3.10 (94%), Linux 2.6.32 or 3.10 (94%), Linux 2.6.39 (94%), Linux 3.4 (94%), Linux 3.1 - 3.2 (93%), Linux 2.6.32 - 2.6.39 (93%), Linux 3.2 - 3.8 (91%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 15 hops
+Service Info: Host: local
+
+TRACEROUTE (using port 113/tcp)
+HOP RTT      ADDRESS
+1   0.21 ms  192.168.1.1
+2   2.49 ms  1.80.53.119.adsl-pool.jlccptt.net.cn (119.53.80.1)
+3   ...
+4   25.45 ms 169.96.48.119.adsl-pool.jlccptt.net.cn (119.48.96.169)
+5   23.14 ms 219.158.19.49
+6   21.39 ms 219.158.6.42
+7   49.64 ms 219.158.40.166
+8   ...
+9   52.01 ms 59.43.246.113
+10  61.50 ms 59.43.248.246
+11  54.65 ms 59.43.248.194
+12  58.28 ms 118.184.22.2
+13  ... 14
+15  84.90 ms 118.184.31.138
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 126.42 seconds

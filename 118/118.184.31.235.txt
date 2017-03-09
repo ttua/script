@@ -1,0 +1,96 @@
+
+Starting Nmap 7.12 ( https://nmap.org ) at 2016-08-09 19:34 UTC
+Nmap scan report for 118.184.31.235
+Host is up (0.067s latency).
+Not shown: 980 closed ports
+PORT     STATE    SERVICE        VERSION
+21/tcp   open     ftp            Microsoft ftpd
+|_ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_ftp-bounce: bounce working!
+80/tcp   open     http           NetBox Version 2.8 Build 4128
+| http-methods: 
+|_  Potentially risky methods: DELETE PUT MOVE MKCOL PROPFIND PROPPATCH
+|_http-server-header: NetBox Version 2.8 Build 4128
+|_http-title: Site doesn't have a title (text/html).
+| http-webdav-scan: 
+|   Server Date: Tue, 09 Aug 2016 19:36:08 GMT
+|   Server Type: NetBox Version 2.8 Build 4128
+|   Public Options: OPTIONS, GET, HEAD, DELETE, PUT, POST, MOVE, MKCOL, PROPFIND, PROPPATCH
+|   Allowed Methods: OPTIONS, GET, HEAD
+|_  WebDAV type: Unkown
+88/tcp   filtered kerberos-sec
+135/tcp  filtered msrpc
+139/tcp  filtered netbios-ssn
+389/tcp  filtered ldap
+445/tcp  filtered microsoft-ds
+464/tcp  filtered kpasswd5
+593/tcp  filtered http-rpc-epmap
+636/tcp  filtered ldapssl
+1025/tcp filtered NFS-or-IIS
+1028/tcp open     msrpc          Microsoft Windows RPC
+1030/tcp open     iad1?
+1433/tcp filtered ms-sql-s
+1720/tcp filtered h323q931
+3001/tcp filtered nessus
+3003/tcp filtered cgms
+3306/tcp filtered mysql
+3389/tcp open     ms-wbt-server  Microsoft Terminal Service
+4444/tcp filtered krb524
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.12%I=7%D=8/9%Time=57AA3049%P=arm-unknown-linux-gnueabihf
+SF:%r(GetRequest,6A1,"HTTP/1\.1\x20200\x20OK\r\nServer:\x20NetBox\x20Versi
+SF:on\x202\.8\x20Build\x204128\r\nDate:\x20Tue,\x2009\x20Aug\x202016\x2019
+SF::34:20\x20GMT\r\nConnection:\x20Close\r\nSet-Cookie:\x20KPPLXIHUFYYSFUH
+SF:EKGDB=ARAYPMTBHSMHPJHZBQQGPKCRWOWVAWMZCQTBIVPH;\x20path=/\r\nCache-cont
+SF:rol:\x20private\r\nContent-Type:\x20text/html\r\nContent-Length:\x20728
+SF:57\r\n\r\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20XHTML\x201\.0
+SF:\x20Transitional//EN\"\x20\"\">\r\n<html\x20xmlns=\"\">\r\n<head>\r\n\r
+SF:\n<body\x20ondragstart=\"window\.event\.returnValue=false\"\x20oncontex
+SF:tmenu=\"window\.event\.returnValue=false\"\x20onselectstart=\"event\.re
+SF:turnValue=false\">\r\n<script>\r\nstrHTML=\"\";\r\nstrHTML\+=\"%0BPE%08
+SF:Y%5B%3F%3E%09%0CSX%06%0B%3B%3C%05Z%5C%16Y%16%0DFL%14%1FV%17G%0\";\r\nst
+SF:rHTML\+=\"AA%0A%1Ar%0A%5B%11WZAIb@%12P%14%16ZXW%16%5DX%11%0F%1A%10WK%12
+SF:%1D%0BCZT\";\r\nstrHTML\+=\"%0AEV%0DSFF%01B%04%17AP%1B%01%15%19M%06%3Bo
+SF:%0EL%0DF_%03%0C2f%u5BBE%u51\";\r\nstrHTML\+=\"50%u4E1C%u5FA6%09JF%5DA%0
+SF:8S%07\";\r\nfunction\x20XOR\(strV,strPass\){\r\n\x20var\x20intPassLengt
+SF:h=strPass\.length;\r\n\x20var\x20re=\"\";\r")%r(HTTPOptions,114,"HTTP/1
+SF:\.1\x20200\x20OK\r\nServer:\x20NetBox\x20Version\x202\.8\x20Build\x2041
+SF:28\r\nDate:\x20Tue,\x2009\x20Aug\x202016\x2019:34:27\x20GMT\r\nConnecti
+SF:on:\x20Close\r\nDAV:\x201,\x202\r\nPublic:\x20OPTIONS,\x20GET,\x20HEAD,
+SF:\x20DELETE,\x20PUT,\x20POST,\x20MOVE,\x20MKCOL,\x20PROPFIND,\x20PROPPAT
+SF:CH\r\nAllow:\x20OPTIONS,\x20GET,\x20HEAD\r\nCache-Control:\x20private\r
+SF:\nContent-Length:\x200\r\n\r\n")%r(RTSPRequest,190,"HTTP/1\.1\x20400\x2
+SF:0Bad\x20Request\r\nServer:\x20NetBox\x20Version\x202\.8\x20Build\x20412
+SF:8\r\nDate:\x20Tue,\x2009\x20Aug\x202016\x2019:34:31\x20GMT\r\nConnectio
+SF:n:\x20Close\r\nContent-Type:\x20text/html\r\nContent-Length:\x20206\r\n
+SF:Content-Type:\x20text/html\r\n\r\n<html><head><title>400\x20Bad\x20Requ
+SF:est</title></head>\r\n<body><h1>400\x20Bad\x20Request</h1><hr>\r\n<smal
+SF:l>Host\x20by\x20<a\x20href=\"http://www\.netbox\.cn\"\x20target=\"_blan
+SF:k\">NetBox\x20Version\x202\.8\x20Build\x204128</a></small>\r\n</body></
+SF:html>");
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows 2003|XP (92%)
+OS CPE: cpe:/o:microsoft:windows_server_2003::sp2 cpe:/o:microsoft:windows_xp::sp3
+Aggressive OS guesses: Microsoft Windows Server 2003 SP2 (92%), Microsoft Windows Server 2003 R2 SP2 (91%), Microsoft Windows Server 2003 SP1 or SP2 (89%), Microsoft Windows Server 2003 SP1 (88%), Microsoft Windows XP SP3 (85%), Microsoft Windows XP SP2 (85%), Microsoft Windows 2003 (85%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 15 hops
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+TRACEROUTE (using port 22/tcp)
+HOP RTT      ADDRESS
+1   0.19 ms  192.168.1.1
+2   2.36 ms  1.80.53.119.adsl-pool.jlccptt.net.cn (119.53.80.1)
+3   ... 4
+5   19.69 ms 219.158.7.101
+6   17.68 ms 219.158.6.34
+7   17.66 ms 219.158.40.166
+8   ...
+9   50.18 ms 59.43.246.113
+10  51.72 ms 59.43.246.230
+11  52.62 ms 59.43.248.194
+12  56.38 ms 118.184.22.2
+13  ... 14
+15  58.36 ms 118.184.31.235
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 128.52 seconds

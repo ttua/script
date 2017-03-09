@@ -1,0 +1,78 @@
+
+Starting Nmap 7.12 ( https://nmap.org ) at 2016-08-09 14:52 UTC
+Nmap scan report for 118.184.31.46
+Host is up (0.070s latency).
+Not shown: 985 closed ports
+PORT      STATE    SERVICE        VERSION
+80/tcp    open     http           Microsoft IIS httpd 7.5
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/7.5
+|_http-title: IIS7
+135/tcp   filtered msrpc
+139/tcp   filtered netbios-ssn
+445/tcp   filtered microsoft-ds
+593/tcp   filtered http-rpc-epmap
+1433/tcp  open     ms-sql-s       Microsoft SQL Server 2008 R2 10.50.1600.00; RTM
+| ms-sql-ntlm-info: 
+|   Target_Name: WIN-5JKMU7VUHC3
+|   NetBIOS_Domain_Name: WIN-5JKMU7VUHC3
+|   NetBIOS_Computer_Name: WIN-5JKMU7VUHC3
+|   DNS_Domain_Name: WIN-5JKMU7VUHC3
+|   DNS_Computer_Name: WIN-5JKMU7VUHC3
+|_  Product_Version: 6.1.7601
+| ssl-cert: Subject: commonName=SSL_Self_Signed_Fallback
+| Not valid before: 2016-07-28T16:38:10
+|_Not valid after:  2046-07-28T16:38:10
+|_ssl-date: 2016-08-09T14:55:38+00:00; +1m49s from scanner time.
+2383/tcp  open     ms-olap4?
+3389/tcp  open     ms-wbt-server  Microsoft Terminal Service
+| ssl-cert: Subject: commonName=WIN-5JKMU7VUHC3
+| Not valid before: 2016-07-27T11:02:31
+|_Not valid after:  2017-01-26T11:02:31
+|_ssl-date: 2016-08-09T14:55:38+00:00; +1m49s from scanner time.
+4444/tcp  filtered krb524
+49152/tcp open     unknown
+49153/tcp open     msrpc          Microsoft Windows RPC
+49154/tcp open     msrpc          Microsoft Windows RPC
+49155/tcp open     msrpc          Microsoft Windows RPC
+49156/tcp open     msrpc          Microsoft Windows RPC
+49157/tcp open     msrpc          Microsoft Windows RPC
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows Vista|7|2008|2012|8.1 (95%)
+OS CPE: cpe:/o:microsoft:windows_vista::- cpe:/o:microsoft:windows_vista::sp1 cpe:/o:microsoft:windows_7::sp1 cpe:/o:microsoft:windows_server_2008:r2:sp1 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows_server_2012 cpe:/o:microsoft:windows_8.1
+Aggressive OS guesses: Microsoft Windows Vista SP0 - SP1 (95%), Microsoft Windows 7 SP1 (95%), Microsoft Windows Server 2008 R2 SP1 (94%), Microsoft Windows 7 (92%), Microsoft Windows Server 2008 R2 (92%), Microsoft Windows 7 SP1 or Windows Server 2008 R2 (92%), Microsoft Windows 7 SP1 or Windows Server 2008 SP2 or 2008 R2 SP1 (92%), Microsoft Windows Vista SP0 or SP1, Windows Server 2008 SP1, or Windows 7 (92%), Microsoft Windows 7 Professional (92%), Microsoft Windows Server 2008 R2 SP1 or Windows 8 (91%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 14 hops
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| ms-sql-info: 
+|   118.184.31.46:1433: 
+|     Version: 
+|       Product: Microsoft SQL Server 2008 R2
+|       name: Microsoft SQL Server 2008 R2 RTM
+|       Post-SP patches applied: false
+|       number: 10.50.1600.00
+|       Service pack level: RTM
+|_    TCP port: 1433
+
+TRACEROUTE (using port 53/tcp)
+HOP RTT      ADDRESS
+1   0.15 ms  192.168.1.1
+2   2.40 ms  1.80.53.119.adsl-pool.jlccptt.net.cn (119.53.80.1)
+3   ...
+4   27.95 ms 169.96.48.119.adsl-pool.jlccptt.net.cn (119.48.96.169)
+5   25.00 ms 219.158.19.49
+6   26.30 ms 219.158.6.42
+7   23.37 ms 219.158.40.166
+8   ...
+9   53.38 ms 59.43.246.10
+10  ...
+11  76.82 ms 59.43.248.194
+12  63.21 ms 118.184.22.2
+13  ...
+14  57.90 ms 118.184.31.46
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 115.34 seconds
