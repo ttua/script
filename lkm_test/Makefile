@@ -5,3 +5,6 @@ PWD	:=$(shell pwd)
 
 default:
 	$(MAKE) -C $(KDIR) SUBDIRS=$(PWD) modules
+
+clean:
+	rm *.mod.c *.o *.order *.symvers *.ko

@@ -1,2 +1,2 @@
-/root/lkm_test/lkm.ko
-/root/lkm_test/lkm.o
+/root/script/lkm_test/lkm.ko
+/root/script/lkm_test/lkm.o
